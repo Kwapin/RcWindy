@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="?android:attr/listPreferredItemHeight"
+android:padding="6dip"
+    android:id="@android:id/list">
+
+
+
+    <ImageView
+        android:id="@+id/SpotAvilabilityIcon"
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:background="@color/green_apple"/>
+
+    <ImageView
+        android:id="@+id/WeatherIcon"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/WindSpeed"
+        android:scaleType="centerInside"
+        />
+    <TextView
+        android:id="@+id/WindSpeed"
+        android:text="6"
+        android:textSize="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/WindSpeedUnit"
+        android:layout_gravity="center"
+        android:layout_centerVertical="true"/>
+    <TextView
+        android:text="m/s"
+        android:textSize="30dp"
+        android:id="@+id/WindSpeedUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/SpotAvilabilityIcon"
+        android:layout_toStartOf="@+id/WeatherIcon"
+        android:layout_toLeftOf="@+id/WeatherIcon"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/SpotName"
+            android:text="Londyn"
+            android:textSize="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"/>
+    </FrameLayout>
+
+
+</RelativeLayout>

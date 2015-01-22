@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RcWindy</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_spot">SpotActivity</string>
+    <string name="action_new">Add Spot</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="rePassword">Repeat Password</string>
+    <string name="zaloguj">Zaloguj</string>
+    <string name="signUp">Stwórz Konto</string>
+    <string name="title_activity_spot_add">SpotAddActivity</string>
+    <string name="DodajSpot">Dodaj Spot</string>
+
+</resources>

@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".HelloActivity">
+
+    <TextView
+        android:id="@+id/welcomeInfo"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+    <EditText
+        android:id="@+id/loginText"
+        android:hint="@string/login"
+        android:layout_below="@+id/welcomeInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/password"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_below="@+id/loginText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/rePassword"
+        android:visibility="invisible"
+        android:hint="@string/rePassword"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_below="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/passStrengthLabel"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/rePassword"
+        />
+    <Button
+        android:id="@+id/loginButton"
+        android:text="@string/zaloguj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/passStrengthLabel"
+        android:onClick="logowanie"/>
+    <Button
+        android:id="@+id/signup"
+        android:text="Stworz Konto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passStrengthLabel"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:onClick="dodajUser"
+        />
+    <Button
+        android:id="@+id/signupButton"
+        android:text="@string/signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/loginButton"
+        android:layout_below="@id/passStrengthLabel"
+        android:onClick="zmienXML"
+        />
+
+
+
+
+</RelativeLayout>
