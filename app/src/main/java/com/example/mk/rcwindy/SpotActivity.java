@@ -10,9 +10,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
+import com.example.mk.rcwindy.Adapter.SpotsAdapter;
 import com.example.mk.rcwindy.Data.DatabaseHandler;
 import com.example.mk.rcwindy.Data.Spot;
 
@@ -23,22 +26,33 @@ import java.util.List;
 
 public class SpotActivity extends ActionBarActivity {
 
-
     int loggedUserId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spot);
 
-       DatabaseHandler db = new DatabaseHandler(this);
-       List<Spot> spots = db.getUserSpotList(loggedUserId);
-        for (Spot s : spots){
-            String log = "hej"+s.getSpotName()+s.getWindSpeed();
-            Log.d("Name:",log);
 
-        }
+      // List<Spot> spots = db.getUserSpotList(loggedUserId);
+      //  for (Spot s : spots){
+      //      String log = "hej"+s.getSpotName()+s.getWindSpeed();
+      //      Log.d("Name:",log);
 
-      //  ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.list_item_autocomplete,ArrayofSpots);
+      //  }
+
+        DatabaseHandler db = new DatabaseHandler(this);
+        ListView listView = (ListView) findViewById(R.id.listLajout);
+        ArrayList<Spot> spots = db.getUserSpotList(loggedUserId);
+
+        SpotsAdapter SpotsAdapter = new SpotsAdapter(
+                this,
+                R.layout.spot_listlayout,
+                spots );
+
+        listView.setAdapter(SpotsAdapter);
+
+        //  ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.list_item_autocomplete,ArrayofSpots);
 
 
 

@@ -202,8 +202,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     //Get Current User Spot List
 
-    public List<Spot> getUserSpotList(int id){
-        List<Spot> spotList = new ArrayList<Spot>();
+    public ArrayList<Spot> getUserSpotList(int id){    //było samo List a nie ArrayList i w tym wersie nizej tez
+        ArrayList<Spot> spotList = new ArrayList<Spot>();
         String selectQuery = "SELECT " +SPOT_ID+","+ SPOT_NAME + ","+ SPOT_LATITUDE + ","+SPOT_LONGITUDE+","+SPOT_WIND_SPEED +","+SPOT_WEATHER_ICON+
                 " FROM " + TABLE_SPOT + " WHERE "+SPOT_USER_ID + "="+id;
 
